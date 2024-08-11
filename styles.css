@@ -1,0 +1,431 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Jua', sans-serif;
+    background-color: #f9f4e8;
+    color: #333333;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #ffd7a8;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #5c3d2e;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #5c3d2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.auth-buttons .btn-login,
+.auth-buttons .btn-signup {
+    background-color: #ff6f61;
+    padding: 7px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Adjusting content for fixed header */
+body {
+    padding-top: 60px;
+}
+
+/* Home Section */
+.home-section {
+    padding: 40px 0 10px 0;
+    text-align: center;
+    background-color: #ffe8d6;
+}
+
+.home-section .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.home-section .btn-download {
+    background-color: #ff6f61;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Features Section (슬라이더) */
+.features-slider-section {
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-text {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide-text h3 {
+    font-size: 28px;
+    color: #5c3d2e;
+    margin-bottom: 15px;
+}
+
+.slide-text p {
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* 각 슬라이드별 이미지 크기 조절 */
+.feature-image-1 {
+    width: 45%;
+    height: auto;
+}
+
+.feature-image-2 {
+    width: 62%; /* 두 번째 슬라이드의 이미지를 더 크게 설정 */
+    height: auto;
+}
+
+.feature-image-3 {
+    width: 62%; /* 세 번째 슬라이드의 이미지를 별도로 조정 */
+    height: auto;
+}
+
+.feature-image-4 {
+    width: 67%; /* 네 번째 슬라이드의 이미지를 더 작게 설정 */
+    height: auto;
+}
+
+.feature-image-5 {
+    width: 60%; /* 다섯 번째 슬라이드의 이미지를 별도로 조정 */
+    height: auto;
+}
+
+.feature-image-6 {
+    width: 25%; /* 여섯 번째 슬라이드의 이미지를 별도로 조정 */
+    height: auto;
+}
+
+.feature-image-7 {
+    width: 60%; /* 일곱 번째 슬라이드의 이미지를 별도로 조정 */
+    height: auto;
+}
+
+.feature-image-8 {
+    width: 25%; /* 여덟 번째 슬라이드의 이미지를 별도로 조정 */
+    height: auto;
+}
+
+.feature-image-9 {
+    width: 25%; /* 아홉 번째 슬라이드의 이미지를 별도로 조정 */
+    height: auto;
+}
+
+/* 귀여운 슬라이드 버튼 */
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff9f9f; /* 밝은 핑크 색상 */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background-color: #ff6f6f; /* 좀 더 진한 핑크로 변경 */
+}
+
+.prev-slide {
+    left: 15px;
+}
+
+.next-slide {
+    right: 15px;
+}
+
+/* Info Section */
+.info-section {
+    padding: 80px 0;
+    background-color: #ffe8d6;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #5c3d2e;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background-color: #ffedd5;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    color: inherit;
+}
+
+.info-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #5c3d2e;
+}
+
+.info-card p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Journal Section */
+.journal-section {
+    padding: 80px 0;
+    background-color: #fff3e6;
+    text-align: center;
+}
+
+.journal-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #5c3d2e;
+}
+
+.journal-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #5c3d2e;
+}
+
+.journal-form {
+    background-color: #ffedd5;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.journal-form input,
+.journal-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.journal-form input:focus,
+.journal-form textarea:focus {
+    outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 138, 101, 0.5);
+}
+
+.journal-form .btn-submit {
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.journal-entries {
+    background-color: #ffedd5;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.journal-entries h3 {
+    color: #5c3d2e;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.journal-entry {
+    background-color: #ffe8d6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.journal-entry h4 {
+    margin: 0 0 10px;
+    color: #5c3d2e;
+    font-size: 20px;
+}
+
+.journal-entry p {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Support Section */
+.support-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffe8d6;
+}
+
+.support-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #5c3d2e;
+}
+
+.support-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #5c3d2e;
+}
+
+.support-section .btn-support {
+    background-color: #ff6f61;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.support-section .btn-support:hover {
+    background-color: #e85a50;
+}
+
+/* Footer */
+footer {
+    background-color: #ffd7a8;
+    padding: 20px 0;
+    text-align: center;
+    color: #5c3d2e;
+    font-size: 18px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 600;
+}
